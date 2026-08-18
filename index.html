@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- saved from url=(0144)file:///Users/ebi/Downloads/%E3%81%8D%E3%81%A4%E3%81%AD%E3%81%A1%E3%82%83%E3%82%93%E3%81%AD%20%E5%85%AC%E5%BC%8F%E3%82%B5%E3%82%A4%E3%83%88.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>きつねちゃんbot公式サイト</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #fdf6f0;
+            color: #4a3e35;
+            line-height: 1.6;
+            text-align: center;
+        }
+        header {
+            background-color: #d35400;
+            color: white;
+            padding: 50px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        /* ボタンとローディングのスタイル */
+        .btn {
+            display: inline-block;
+            background-color: #d35400;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+        }
+        #loading {
+            display: none;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #d35400;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>きつねちゃんbot</h1>
+    <p>読み上げ、音楽再生機能があるすごいBot</p>
+</header>
+
+<div class="container">
+    <h2>Discord Bot 導入</h2>
+    <p>以下のボタンから「きつねちゃん」Botをサーバーに招待できます。</p>
+    
+    <!-- 導入ボタン -->
+    <button class="btn" id="inviteBtn" onclick="startLoading()">Botをサーバーに招待する</button>
+    
+    <!-- ローディング表示 -->
+    <div id="loading">接続中... 準備しています...</div>
+</div>
+
+<script>
+    function startLoading() {
+        // ボタンを非表示にし、ローディングを表示
+        document.getElementById('inviteBtn').style.display = 'none';
+        document.getElementById('loading').style.display = 'block';
+        
+        // 2秒後にDiscordのリンクへ遷移
+        setTimeout(function() {
+            window.location.href = 'https://discord.com/oauth2/authorize?client_id=1410598158651625562&permissions=8&integration_type=0&scope=bot';
+        }, 2000);
+    }
+</script>
+
+
+
+</body></html>
